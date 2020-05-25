@@ -1,0 +1,11 @@
+Q1='''SELECT COUNT(id) from Movie WHERE (year = 2002 and rank > 2 and name LIKE 'Ha%');''' 
+Q2='''SELECT MAX(rank) from Movie WHERE year IN (1983,1994) and name LIKE 'Autom%';''' 
+Q3='''SELECT COUNT(id) from Actor WHERE gender='M' and (fname LIKE '%ei' or lname LIKE 'ei%') ;'''
+Q4='''SELECT AVG(rank) from Movie WHERE year IN(1993,1995,2000) and (rank >= 4.2) ;'''
+Q5='''SELECT sum(rank) from Movie WHERE year BETWEEN 1981 AND 1984 and (rank < 9) and name LIKE '%Hary%';'''
+Q6='''SELECT year from Movie WHERE rank=5 LIMIT 1;'''
+Q7='''SELECT COUNT(id) from Actor WHERE gender='F' or fname = lname;'''
+Q8='''SELECT DISTINCT fname  from  Actor WHERE lname LIKE '%ei' ORDER BY fname ASC LIMIT 100;'''
+Q9='''SELECT id,name AS movie_title,year from Movie WHERE year IN(2001,2002,2005,2006) LIMIT 25 OFFSET 10;'''
+Q10='''SELECT DISTINCT lname from Director WHERE fname IN ("Yeud", "Wolf", "Vicky") ORDER BY lname ASC LIMIT 5;'''
+
